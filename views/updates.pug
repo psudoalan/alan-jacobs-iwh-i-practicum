@@ -1,0 +1,20 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 Add a Mail Server Integration
+        a(href="/") Return to the homepage
+        form(method="POST" action="/update-cobj")
+            label(for="name") Name
+            input(type="text" id="name" name="name")
+            label(for="vendor") Vendor
+            input(type="text" id="vendor" name="vendor")
+            label(for="status") Status
+            select(id="status" name="status")
+                option(value="Live") Live
+                option(value="Testing") Testing
+                option(value="Retired") Retired
+            button(type="submit") Add
