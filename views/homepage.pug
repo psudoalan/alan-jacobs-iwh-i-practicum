@@ -1,0 +1,19 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 Mail Server Integrations
+        a(href="/update-cobj") Add to this table
+        table
+            tr
+                th Name
+                th Vendor
+                th Status
+            each record in data
+                tr
+                    td= record.properties.name
+                    td= record.properties.vendor
+                    td= record.properties.status
